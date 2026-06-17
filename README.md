@@ -31,6 +31,26 @@ Digital phantoms are crucial in MRI for pulse sequence optimization, artifact co
 ### Performance
 The proposed **SA** strategy achieves high structural similarity between original and synthesized images on real-world datasets, outperforming standard baseline methods with MS-SSIM scores of **0.99** ($T_1$), **0.95** ($T_2$), and **0.98** ($PD$).
 
+<br><br>
+
+## Examples of generated quantitative MRI maps
+
+<p align="center">
+  <img src="assets/SA_maps.png" alt="Quantitative maps" width="85%">
+  <br>
+  <em>Figure 1: Examples of generated quantitative MRI maps.</em>
+</p>
+
+<br>
+
+## Visual Comparison
+
+<p align="center">
+  <img src="assets/mri_comparison_results.png" alt="Weighted Images" width="85%">
+  <br>
+  <em>Figure 2: Comparison between ground truth and synthesized MRI modalities.</em>
+</p>
+
 
 ## Experiments
 Modify config files:
