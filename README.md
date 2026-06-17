@@ -9,16 +9,14 @@
 <div align="center">
     <sup>1</sup>ITMO University
 </div>
------------------
-
-
-
+<br><br>
 
 
 This repository contains the **official implementation** of the following paper:
 
 > **Sequence-Conditioned Flow-based Models for Digital Phantom Generation in MRI**<br>
 > MICCAI 2026
+> 
 
 ## Experiments
 Modify config files:
@@ -44,3 +42,7 @@ python train_all.py --config configs/config_diff_synth_formula.yaml
 
 python test_all.py --config configs/config_diff_synth_formula.yaml --load_path {PATH TO CHECKPOINT}
 ```
+
+## Acknowledgements
+
+Our work is built upon the methods and insights from the paper ["Hierarchy Flow For High-Fidelity Image-to-Image Translation"](https://arxiv.org/abs/2308.06909). We sincerely thank the authors for their foundational research.
