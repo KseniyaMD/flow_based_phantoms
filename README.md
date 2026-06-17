@@ -12,11 +12,25 @@
 <br><br>
 
 
-This repository contains the **official implementation** of the following paper:
+<br><br>
 
-> **Sequence-Conditioned Flow-based Models for Digital Phantom Generation in MRI**<br>
-> MICCAI 2026
-> 
+## Description
+
+This repository contains the official implementation of the paper **"Sequence-Conditioned Flow-based Models for Digital Phantom Generation in MRI"**.
+MICCAI 2026
+
+### Overview
+Digital phantoms are crucial in MRI for pulse sequence optimization, artifact correction, and generating physically grounded synthetic data via augmentation. This work introduces a self-supervised, flow-based deep learning framework to estimate quantitative $T_1$, $T_2$, and $PD$ maps directly from conventional weighted brain MR images. 
+
+### Key Features
+* **Sequence-Aware Conditioning:** Explicitly incorporates MRI pulse sequence parameters — repetition time ($TR$), echo time ($TE$), and echo spacing ($ES$) — to improve model robustness to contrast variations.
+* **No Ground Truth Required:** Operates in a self-supervised manner, eliminating the need for real ground-truth quantitative maps during training.
+* **High Anatomical Fidelity:** Utilizes a **Sequence-Aware Affine Network (SA)** within a Hierarchy Flow architecture to preserve fine structural details without introducing checkerboard artifacts.
+* **Multi-Contrast Synthesis:** Enables the simulation of various unseen pulse sequences (e.g., MPRAGE, GRE, FLAIR) derived from the generated digital phantoms.
+
+### Performance
+The proposed **SA** strategy achieves high structural similarity between original and synthesized images on real-world datasets, outperforming standard baseline methods with MS-SSIM scores of **0.99** ($T_1$), **0.95** ($T_2$), and **0.98** ($PD$).
+
 
 ## Experiments
 Modify config files:
@@ -45,4 +59,5 @@ python test_all.py --config configs/config_diff_synth_formula.yaml --load_path {
 
 ## Acknowledgements
 
-Our work is built upon the methods and insights from the paper ["Hierarchy Flow For High-Fidelity Image-to-Image Translation"](https://arxiv.org/abs/2308.06909). We sincerely thank the authors for their foundational research.
+Our work is built upon the methods and from the paper ["Hierarchy Flow For High-Fidelity Image-to-Image Translation"](https://arxiv.org/abs/2308.06909). 
+We sincerely thank the authors for their foundational research.
