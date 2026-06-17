@@ -9,6 +9,8 @@
 <div align="center">
     <sup>1</sup>ITMO University
 </div>
+>
+>
 
 
 
@@ -29,4 +31,16 @@ Modify config files:
   test:
     rootA: '{YOUR PATH TO WEIGHTED MR IMAGES}
     rootB: '{YOUR PATH TO SAMPLE QUANTITATIVE MAPS}
+```
+
+**Training**
+```Shell
+
+python train_all.py --config configs/config_diff_synth_formula.yaml
+```
+
+**Test**
+```Shell
+
+python test_all.py --config configs/config_diff_synth_formula.yaml --load_path {PATH TO CHECKPOINT}
 ```
