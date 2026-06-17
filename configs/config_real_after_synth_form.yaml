@@ -1,0 +1,51 @@
+# logdir = os.path.join(output, task_name)
+output: ./output_dir/
+task_name: base_exp
+
+dataset:
+  synthetic: False
+  train:
+    rootA: 'data/train/weighted_real_different'
+    rootB: 'data/train/maps_sample/subject04_crisp_v_180.npy'
+    width: 256
+    height: 256
+    scale_l: 0.8
+    scale_h: 1.0
+    transform: [] #['h_flip', 'v_flip', 'crop', 'normalize', 'random_resized_crop']
+    random_pair: True
+    return_name: False
+    batch_size: 1
+    epochs: 50
+
+  test:
+    rootA: 'data/test/weighted_real_different'
+    rootB: 'data/test/maps_sample/subject18_crisp_v_180.npy'
+    width: 256
+    height: 256
+    scale_l: 0.8
+    scale_h: 1.0
+    transform: [] #['h_flip', 'v_flip', 'crop', 'normalize']
+    random_pair: False
+    return_name: False
+    batch_size: 16
+
+lr: 0.0001
+epochs: 120
+max_iter: 300000
+print_freq: 450
+save_freq: 450
+resume: False
+load_path: 'checkpoint_for_resume/0.ckpt.pth.tar'
+df_params_path: 'data/train/param_tables/df_params.csv'
+
+network:
+  configurable: False #[True, False]
+  pad_size: 10
+  in_channel: 3
+  out_channels: [30, 120] #[30, 120], [12, 60, 120], [30, 120, 480], [30, 120, 480, 1920]
+  weight_type: 'learned' #['fixed', 'sigmoid', 'softmax', 'attention', 'learned']
+
+
+lr_scheduler:
+  type: cosine
+  eta_min: 0.0000000
