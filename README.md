@@ -16,8 +16,8 @@
 
 ## Description
 
-This repository contains the official implementation of the paper **"Sequence-Conditioned Flow-based Models for Digital Phantom Generation in MRI"**.
-MICCAI 2026
+This repository contains the official implementation of the paper **"Sequence-Conditioned Flow-based Models for Digital Phantom Generation in MRI"**
+MICCAI 2026.
 
 ### Overview
 Digital phantoms are crucial in MRI for pulse sequence optimization, artifact correction, and generating physically grounded synthetic data via augmentation. This work introduces a self-supervised, flow-based deep learning framework to estimate quantitative $T_1$, $T_2$, and $PD$ maps directly from conventional weighted brain MR images. 
@@ -51,7 +51,7 @@ The proposed **SA** strategy achieves high structural similarity between origina
   <em>Figure 2: Comparison between ground truth and synthesized MRI modalities.</em>
 </p>
 
-
+<br><br>
 ## Experiments
 Modify config files:
 ```yaml
