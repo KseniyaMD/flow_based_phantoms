@@ -70,5 +70,5 @@ python test_all.py --config configs/config_diff_synth_formula.yaml --load_path {
 
 ## Acknowledgements
 
-Our work is built upon the methods and from the paper ["Hierarchy Flow For High-Fidelity Image-to-Image Translation"](https://arxiv.org/abs/2308.06909). 
+Our work is built upon the methods from the paper ["Hierarchy Flow For High-Fidelity Image-to-Image Translation"](https://arxiv.org/abs/2308.06909). 
 We sincerely thank the authors for their foundational research.
